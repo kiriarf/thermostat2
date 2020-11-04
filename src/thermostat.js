@@ -5,29 +5,22 @@ class Thermostat {
     this.powerSaving = true;
   }
 
-  up(degrees) {
-    if (this.powerSaving) {
-      if (this.temperature + degrees > 25) {
-        throw new Error('Maximum temperature in Power Saving mode is 25');
-      } else {
-        this.temperature += degrees;
-      };
-    } else {
-      if (this.temperature + degrees > 32) {
-        throw new Error('Maximum temperature is 32');
-      } else {
-        this.temperature += degrees;
-      };
-    };  
-  }
+  setTemperature(number) {
+    if (number < 10 ) {
+      throw new Error('Minimum temperature is 10');
+    }; 
 
-  down(degrees) {
-    if (this.temperature - degrees >= 10) {
-     this.temperature -= degrees
-    } else {
-      throw new Error('Minimum temperature is 10')
-    }
-  }
+    if (this.powerSaving && number > 25) {
+      throw new Error('Maximum temperature in Power Saving mode is 25');
+    };
+    
+    if (!this.powerSaving && number > 32) {
+      throw new Error('Maximum temperature is 32');
+    };
+     
+    this.temperature = number;
+   }
+  
 
   savingsOff() {
     this.powerSaving = false;

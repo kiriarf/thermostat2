@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset = 'utf-8'>
-  <title>Thermostat</title>
-</head>
+  <head>
+    <meta charset = 'utf-8'>
+    <title>Thermostat</title>
+  </head>
 
-<body>
-<h1>Temperature: </h1>
+  <body>
+    <h1>Temperature: </h1>
+    
+    <label for ="degrees">Enter temperature:</label>
+    <input id="degrees" type="text">
+    
+    <button>Set</button>
+    <button>Reset</button>
+    <br>
+    <button>View Usage</button>
+    <br>
+    <p>Power Saving Mode:</p>
+    <input type = radio id = on name = powersaving value = 'On'>
+    <label for = on>On</label><br>
+    <input type = radio id = off name = powersaving value = 'Off'>
+    <label for = off>Off</label><br>
 
-
-<button>Up</button>
-<button>Down</button>
-<button>Reset</button>
-<button>View Usage</button>
-<input type = radio id = on name = powersaving value = 'On'>
-<label for = on>Power Saving Mode On</label><br>
-<input type = radio id = off name = powersaving value = 'Off'>
-<label for = off>Power Saving Mode Off</label><br>
-
-</body>
+  </body>
 
 </html>
