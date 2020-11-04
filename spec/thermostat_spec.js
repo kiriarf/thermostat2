@@ -56,4 +56,29 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(25);
     });
   });
+
+  describe('reset', function() {
+    it('resets the temperature to 20', function() {
+      thermostat.down(5);
+      thermostat.reset();
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
+
+  describe('viewUsage', function(){
+    it('gives a low usage level to the user when temperature < 18', function(){
+      thermostat.down(5);
+      expect(thermostat.viewUsage()).toEqual('low-usage');
+    });
+
+    it('gives a medium usage level to the user when 18 >= temperature >= 25', function(){
+      expect(thermostat.viewUsage()).toEqual('medium-usage');
+    });
+
+    it('gives a high usage level to the user when 25 < temperature', function(){
+      thermostat.savingsOff();
+      thermostat.up(8);
+      expect(thermostat.viewUsage()).toEqual('high-usage');
+    });
+  });
 });

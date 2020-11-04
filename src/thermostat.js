@@ -40,4 +40,15 @@ class Thermostat {
     this.powerSaving = true;
   }
 
-}
+  reset() {
+    this.temperature = 20
+  }
+
+  viewUsage() {
+    if (this.temperature < 18) { return 'low-usage' }
+    else if (this.temperature >= 18 && this.temperature <= 25) { return 'medium-usage' }
+    return 'high-usage'
+    }
+
+ }
+
