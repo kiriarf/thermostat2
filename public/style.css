@@ -1,0 +1,15 @@
+.low-usage {
+  color: #9bc288;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: #cf796d;
+}
+
+body {
+  background-color: #bfeaf5;
+}

@@ -3,25 +3,39 @@
   <head>
     <meta charset = 'utf-8'>
     <title>Thermostat</title>
+    <link type="text/css" rel="stylesheet" href="public/style.css" >
+    <script src="js/jquery.min.js"></script>
   </head>
-
   <body>
-    <h1>Temperature: </h1>
+    <section>
+      <h1 id="local-temperature"></h1>
+      <form id="select-city">
+        <input id="current-city" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+      </form>
+    </section>
+
+    <h1 id="current_temp"></h1>
+
+    <label for ="temp_input">Enter temperature:</label>
+    <input id="temp_input" type="text">
     
-    <label for ="degrees">Enter temperature:</label>
-    <input id="degrees" type="text">
-    
-    <button>Set</button>
-    <button>Reset</button>
+    <button id="set">Set</button>
+    <button id="reset">Reset</button>
     <br>
-    <button>View Usage</button>
+    <button id="usage">View Usage</button>
+    <p id="usage_output"></p>
     <br>
     <p>Power Saving Mode:</p>
-    <input type = radio id = on name = powersaving value = 'On'>
-    <label for = on>On</label><br>
-    <input type = radio id = off name = powersaving value = 'Off'>
-    <label for = off>Off</label><br>
-
+    <div id="radio_box"></div>
+      <input type="radio" id="savings_on" name="powersaving" value='on'>
+      <label for="savings_on">On</label><br>
+      <input type="radio" id="savings_off" name="powersaving" value="off">
+      <label for="savings_off">Off</label><br>
+    </div>
+    <script src="src/thermostat.js"></script>
+    <script src="src/interface.js"></script>
   </body>
 
 </html>
+
