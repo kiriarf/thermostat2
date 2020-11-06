@@ -8,8 +8,31 @@
 
 .high-usage {
   color: #cf796d;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 body {
   background-color: #bfeaf5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.thermostat {
+  width: 300px;
+  padding: 50px;
+  margin: 20px auto;
+  text-align: center;
+} 
+
+#temp_input {
+  width: 30px
+}
+
+#usage {
+  margin: 20px
 }
