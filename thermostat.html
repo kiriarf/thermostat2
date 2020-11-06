@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset = 'utf-8'>
     <title>Thermostat</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="public/style.css" >
     <script src="js/jquery.min.js"></script>
   </head>
-  <body>
-    <div class='local-weather'>
-    <section>
-      <h1 id="local-temperature"></h1>
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-    </section>
-  </div>
-  <div class='thermostat'>
-    <h1 id="current_temp"></h1>
 
-    <label for ="temp_input">Enter temperature:</label>
-    <input id="temp_input" type="text">
-    
-    <button id="set">Set</button>
-    <button id="reset">Reset</button>
-    <br>
-    <p>Power Saving Mode:</p>
-    <div id="radio_box"></div>
-      <input type="radio" id="savings_on" name="powersaving" value='on'>
-      <label for="savings_on">On</label><br>
-      <input type="radio" id="savings_off" name="powersaving" value="off">
-      <label for="savings_off">Off</label><br>
+  <body>
+
+    <div class="parent">
+      <div class="child">
+        <div class='local-weather'>
+          <section>
+            <h1 id="local-temperature"></h1>
+            <form id="select-city">
+              <input id="current-city" type="text" placeholder="Enter a city"></input>
+              <input class="btn" type="submit"></input>
+            </form>
+          </section>
+        </div>
+
+        <div class='thermostat'>
+          <h1 id="current_temp"></h1>
+
+          <label class="thermo-text" for ="temp_input">Enter temperature:</label>
+          <input id="temp_input" type="text">
+          
+          <button class="btn" id="set">Set</button>
+          <button class="btn" id="reset">Reset</button>
+          <br>
+          <p class="thermo-text">Power Saving Mode:</p>
+          <div id="radio_box"></div>
+            <input type="radio" id="savings_on" name="powersaving" value='on'>
+            <label class="thermo-text" for="savings_on">On</label>
+            <input type="radio" id="savings_off" name="powersaving" value="off">
+            <label class="thermo-text" for="savings_off">Off</label>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </div>
+
     <script src="src/thermostat.js"></script>
     <script src="src/interface.js"></script>
+
   </body>
 
 </html>
