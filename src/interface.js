@@ -17,7 +17,7 @@ $(document).ready(function() {
     var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
     var units = '&units=metric';
     $.get(url + token + units, function(data) {
-      $('#local-temperature').text(`Temperature in ${data.name}: ${data.main.temp} °C`);
+      $('#local-temperature').text(`Temperature in ${data.name}: ${data.main.temp}°C`);
     })
   };  
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
   });
 
   function updTemp() {
-    $('#current_temp').text(`Temperature: ${thermostat.temperature}`);
+    $('#current_temp').text(`Temperature: ${thermostat.temperature}°C`);
     $('#current_temp').attr('class', thermostat.viewUsage()); 
   };
   

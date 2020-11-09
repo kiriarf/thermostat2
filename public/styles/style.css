@@ -1,0 +1,138 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 2rem;
+  background-color: #faf6eb;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+.parent {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  grid-template-rows: 12% 8% auto 10% 15%;
+  grid-template-areas: 
+    "header header header"
+    ". . ."
+    ". thermostat ."
+    ". . ."
+    "footer footer footer";
+}
+
+.ts_menu {
+  grid-area: thermostat;
+  place-self: center;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(235, 214, 190);
+  text-align: center;
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+}
+
+#ts-img {
+  transform: rotate(90deg);
+  margin-top: 15px;
+  margin-left: 30px;
+  grid-column: 1;
+}
+
+#my-name {
+  grid-column: 2;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(235, 214, 190);
+  text-align: center;
+}
+
+.thermostat {
+  padding: 0px;
+  margin: 20px;
+  text-align: left;
+  padding-bottom: 25px;
+  padding-left: 10px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+} 
+
+.local-weather {
+  font-weight: 400;
+  font-size: 12px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+}
+
+.thermo-text{
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.btn {
+  display:inline-block;
+  padding: 0.35em 1.2em;
+  border:0.16em solid black;
+  margin:0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color:black;
+  background-color: #faf6eb;
+  text-align:center;
+  transition: all 0.15s;
+}
+.btn:hover{
+  color:#302e2e62;
+  border-color:#63616162;
+}
+  
+.btn:active{
+color:#BBBBBB;
+border-color:#BBBBBB;
+}
+  
+@media all and (max-width:30em){
+  .btn{
+    display:block;
+    margin:0.4em auto;
+  }
+}
+
+.low-usage {
+  color: #78abdb;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: #cf796d;
+  /* animation: blinker 1s linear infinite; */
+}
+
+/* @keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+} */
+
+#temp_input {
+  width: 30px
+}
