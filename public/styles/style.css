@@ -48,11 +48,18 @@ body {
   grid-column: 2;
 }
 
-.footer {
+footer {
   grid-area: footer;
   background-color: rgb(235, 214, 190);
   text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
 }
+
+#copyright {
+  grid-row: 2 / 3;
+}
+
 
 .thermostat {
   padding: 0px;
